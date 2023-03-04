@@ -1,4 +1,2 @@
-<h1 text-align = "center">What do you expect me to to</h1>
-<p>I'm out >.< </p>
-<p>Làm phần nào responsive luôn phần đó</p>
-<p>Rút kinh nghiệm</p>
+<h1>ĐỒ ÁN FRONT END (HTML/CSS/JAVASCRIPT) KỲ II NĂM NHẤT</h1>
+<h2>Trường đại học Sài Gòn</h2>
