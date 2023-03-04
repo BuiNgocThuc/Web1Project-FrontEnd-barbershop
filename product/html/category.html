@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../home/img/favicon2.png">
+    <title>List-product</title>
+    <link rel="stylesheet" href="../css/category.css">
+    <link rel="stylesheet" href="../../navbar_footer/css/navbar.css">
+    <link rel="stylesheet" href="../../navbar_footer/css/cart.css">
+
+</head>
+
+<body onload="loadPageCategory()">
+    <header class="nav container" id="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../../index.html"><img src="../logo2.png" alt="5Logo"></a>
+            </div>
+            <div class="navbar">
+                <ul class="list">
+                    <li><a href="../../ablum/album.html" class="text_change">Album</a></li>
+                    <li><a href="#product">Sản phẩm</a></li>
+                    <li><a href="../../course/html/course.html">Học Barber</a></li>
+                    <li><a href="../../booking/booking.html">Đặt lịch</a></li>
+                </ul>
+                <ul class="social-icon">
+                    <li><a><i class="bi bi-cart" id="cartIcon"></i></a></li>
+                    <div class="cart">
+                        <div class="cart-title">
+                            <h1>Your Cart</h1>
+                        </div>
+                        <div class="cart-content-container">
+                        </div>
+                        <div class="cart-total">
+                            <div class="cart-total-title">Tổng: </div>
+                            <div class="cart-total-price"></div>
+                        </div>
+                        <!-- Buy button -->
+                        <button type="button" class="btn-buy" value="Buy now" onclick="goToFormCheckout()">Buy
+                            Now</button>
+                        <!-- icon close -->
+                        <i class="bi bi-x" id="close-btn"></i>
+                    </div>
+                    <div class="over-lay"></div>
+                    <li id="login-header"><a>
+                            <i class="bi bi-person" id="user">
+                            </i>
+                        </a>
+                        <!-- <span id="user-login-name" style="margin-left:5px">Hello,</span> -->
+                        <ul id="login-menu">
+                            <li><a href="./login/login.html" target="_blank" id="link-login">Đăng nhập</a></li>
+                        </ul>
+                    </li>
+                    <!-- Link CART to js -->
+                </ul>
+            </div>
+            <div class="hero">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
+        </div>
+    </header>
+    <div class="headline">
+        <div class="slideshow-container">
+            <div class="mySlides fade"></div>
+            <div class="mySlides fade"></div>
+            <div class="mySlides fade"></div>
+            <div class="mySlides fade"></div>
+            <h1>SẢN PHẨM</h1>
+        </div>
+        <div id="wrapper">
+            <div class="tool">
+                <div class="filter">
+                    <form action="">
+                        <label>Phân loại:
+                            <select name="category" class="filter category" onchange="filterByCategory()">
+                                <option checked value="ALL">ALL</option>
+                                <option value="POMADE">POMADE</option>
+                                <option value="SKIN CARE">SKIN CARE</option>
+                                <option value="HAIR & BODY">HAIR & BODY</option>
+                                <option value="BEARD & SHAVE">BEARD & SHAVE</option>
+                            </select> <br>
+                        </label>
+                        <label>Giá:
+                            <input type="text" class="filter price min" placeholder="&#8363; từ">
+                            <span> &#8211; </span>
+                            <input type="text" class="filter price max" onchange="filterByPrice()"
+                                placeholder=" &#8363; đến">
+                        </label>
+                    </form>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="tìm kiếm">
+                    <button class="search-btn" onclick="searchByName()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-search"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="category">
+                <ul class="products">
+                </ul>
+            </div>
+        </div>
+        <div class="pagination">
+        </div>
+    </div>
+</body>
+<script src="../script.js"></script>
+<script src="../product.js"></script>
+<script src="../../navbar_footer/js/shopProduct.js"></script>
+<script src="../../navbar_footer/js/cart.js"></script>
+<script src="../../navbar_footer/js/navbar.js"></script>
+<script src="../../navbar_footer/js/menuscroll.js"></script>
+
+
+</html>

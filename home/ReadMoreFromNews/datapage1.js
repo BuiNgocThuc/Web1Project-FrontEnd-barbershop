@@ -1,0 +1,17 @@
+const data_link = [
+    "ke-dao-mo.html",
+    "baseball.html",
+    "gakuran.html",
+    "barbercon.html",
+    "racingboy.html",
+    "ke-dao-mo.html",
+    "baseball.html",
+    "gakuran.html",
+    "barbercon.html",
+    "racingboy.html",
+    "ke-dao-mo.html",
+    "baseball.html",
+    "gakuran.html",
+    "barbercon.html",
+    "racingboy.html",
+];

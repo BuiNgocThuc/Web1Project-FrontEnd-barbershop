@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(../images/body.jpg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* header */
+.header {
+  position: relative;
+  background-image: url(../images/header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  width: 500px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.wpb_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.box_button p {
+  border: 2px solid rgba(255, 255, 255);
+  padding: 7px 15px;
+  margin-right: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255);
+  transition: 0.5s;
+}
+
+.box_button:hover p {
+  background-color: #dfa450;
+  border-color: #dfa450;
+  transform: scale(1.1);
+}
+
+.hand-icon {
+  position: absolute;
+  width: 50px;
+  height: 70px;
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: hand_icon 0.7s linear infinite;
+}
+
+.hand-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+/*conntent  */
+.conttent_introduce1,
+.conttent_introduce2,
+.conttent_introduce3,
+.conttent_introduce4 {
+  width: 960px;
+  margin: 100px auto;
+}
+
+.wrapper-conttent .img {
+  background-image: url(../images/swirls-2.svg);
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 40px;
+  margin: 15px auto;
+}
+
+.wrapper-conttent .title {
+  text-align: center;
+  font-size: 29px;
+  text-transform: uppercase;
+  color: #231f20;
+}
+
+.wrapper-conttent .conttent_introduce1 p {
+  text-align: center;
+  line-height: 25px;
+  font-size: 20px;
+  margin: 30px;
+}
+
+.container-professor {
+  display: flex;
+  justify-content: space-around;
+}
+
+.wrapper-professor {
+  flex-basis: 30%;
+}
+
+.img-professor img {
+  width: 100%;
+}
+
+.wrapper-name {
+  margin-top: 30px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.name {
+  color: #4c3e2d;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.profession a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.profession:hover {
+  color: #dfa450;
+}
+
+.wrapper-seminar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.img-seminar {
+  flex-basis: 30%;
+  background-image: url("../images/bg.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 460px;
+}
+
+.wrapper-seminar .img-seminar .title h1 {
+  margin-top: 80px;
+  color: aliceblue;
+  font-weight: 800;
+  font-size: 18px;
+  padding: 10px;
+}
+
+hr {
+  width: 50%;
+  margin: 0 auto;
+  border: none;
+  height: 1px;
+  background-color: #babab0;
+  opacity: 0.8;
+}
+
+.wrapper-seminar .img-seminar h2 {
+  color: aliceblue;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.information p {
+  font-size: 16px;
+  text-align: center;
+  line-height: 20px;
+  color: aliceblue;
+}
+
+.price {
+  font-size: 18px;
+  text-align: center;
+  color: aliceblue;
+  font-weight: 500;
+  margin: 20px;
+}
+
+.see-more {
+  width: 40%;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+  border: 0px solid #000;
+  border-radius: 10px;
+  background: rgb(255, 228, 196);
+}
+
+.see-more a {
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.see-more:is(:hover, :focus) {
+  background: #dfa450;
+  outline: 2px solid #dfa450;
+  outline-offset: 2px;
+}
+
+.conttent_introduce6 h4 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  color: black;
+  margin: 20px;
+}
+
+.conttent_introduce6 p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  color: black;
+}
+
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+
+.active.fade-top {
+  animation: fade-top 0.8s ease-in;
+}
+
+.active.fade-bottom {
+  animation: fade-bottom 0.8s ease-in;
+}
+
+.active.fade-left {
+  animation: fade-left 0.8s ease-in;
+}
+
+.active.fade-right {
+  animation: fade-right 0.8s ease-in;
+}
+
+@keyframes fade-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes hand_icon {
+  0% {
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+/* popup form */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000000;
+  background-color: rgb(0, 0, 0, 0.6);
+  animation: form-fade-in 0.2s;
+}
+.form-container {
+  max-width: 500px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: gray;
+  margin: auto;
+}
+.confirm {
+  display: block;
+  margin: 10px;
+}
+/* Full-width input fields */
+.form-container {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  width: 100%;
+  margin: 30px 0px 10px;
+  opacity: 0.8;
+}
+.text-center {
+  text-align: center;
+}
+/* Add a red background color to the cancel button */
+form {
+  position: relative;
+}
+.form-container .cancel {
+  position: absolute;
+  top: 6px;
+  right: 13px;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+}
+.form-container .cancel:hover {
+  color: #dfa450;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
